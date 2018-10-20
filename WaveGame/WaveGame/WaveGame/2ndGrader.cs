@@ -18,12 +18,14 @@ namespace WaveGame
         public enum Directions { Up, Down, Left, Right}
         public Point position { get; set; }
         public int speed { get; set; }
+        public Rectangle Bounds { get; set; }
         Texture2D texture { get; set; }
         SpriteBatch spriteBatch;
         int frames;
         int framesY;
         int qtdFrames;
         float elapsed;
+        int life;
 
 
         public _2ndGrader(Game game)
@@ -33,6 +35,8 @@ namespace WaveGame
             speed = 1;
             frames = 0;
             qtdFrames = 4;
+            life = 3;
+            //Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
         }
 
         public _2ndGrader(Game game, Point pos)
@@ -42,6 +46,8 @@ namespace WaveGame
             speed = 1;
             frames = 0;
             qtdFrames = 4;
+            life = 3;
+            //Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
         }
 
         public override void Initialize()
@@ -58,6 +64,7 @@ namespace WaveGame
 
         public override void Update(GameTime gameTime)
         {
+            Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                         
             if (elapsed > 200)
@@ -116,5 +123,21 @@ namespace WaveGame
                 this.Update(gameTime);
             }            
         }
+
+        public void Hit()
+        {
+
+        }
+
+        public void takeDamage()
+        {
+            this.life -= 1;
+        }
+
+        public int CheckLife()
+        {
+            return this.life;
+        }
+
     }
 }

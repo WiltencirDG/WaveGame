@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\2ndGraders.xnb</Output>
-      <Time>2018-09-01T07:15:43.6813809-03:00</Time>
+      <Output>Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\2ndGraders.xnb</Output>
+      <Time>2018-09-20T19:44:32-03:00</Time>
     </Item>
     <Item>
       <Source>waveFont.spritefont</Source>
@@ -16,8 +16,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb</Output>
-      <Time>2018-09-01T07:32:01.4713324-03:00</Time>
+      <Output>Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb</Output>
+      <Time>2018-09-20T19:44:32-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,10 +26,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGameContent\</RootDirectory>
-      <LoggerRootDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGame\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGame\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGameContent\</RootDirectory>
+      <LoggerRootDirectory>Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\</LoggerRootDirectory>
+      <IntermediateDirectory>Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -57,8 +57,8 @@
         <Value>2011-09-01T16:22:30-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2018-09-01T05:47:50.7181951-03:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-06-27T15:26:05.1399919-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

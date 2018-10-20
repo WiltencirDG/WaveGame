@@ -16,3 +16,11 @@ D:\WaveGame\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.exe
 D:\WaveGame\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.pdb
 D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\2ndGraders.xnb
 D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\2ndGraders.xnb
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\WaveGame.exe
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\WaveGame.pdb
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.csprojResolveAssemblyReference.cache
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.exe
+Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.pdb

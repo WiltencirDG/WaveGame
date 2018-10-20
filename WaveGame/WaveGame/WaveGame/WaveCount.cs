@@ -19,9 +19,9 @@ namespace WaveGame
     {
         Point position { get; set; }
         int actual { get; set; }
+        public int life { get; set; }
         SpriteBatch spriteBatch;
         SpriteFont waveFont;
-
 
         public WaveCount(Game game)
             : base(game)
@@ -52,6 +52,10 @@ namespace WaveGame
         {
             spriteBatch.Begin();
             spriteBatch.DrawString(waveFont, "Wave: " + actual, new Vector2(position.X, position.Y), Color.Black);
+            spriteBatch.End();
+
+            spriteBatch.Begin();
+            spriteBatch.DrawString(waveFont, "Life: " + this.life, new Vector2(position.X, position.Y+15), Color.Black);
             spriteBatch.End();
 
             base.Draw(gameTime);

@@ -32,7 +32,7 @@ namespace WaveGame
             {
                 ndGraders.Add
                     (
-                        new _2ndGrader(this, new Point(rand.Next(500),rand.Next(300)))
+                        new _2ndGrader(this, new Point(rand.Next(600),rand.Next(300)))
                     );
             }
         }
@@ -64,6 +64,7 @@ namespace WaveGame
 
         protected override void UnloadContent()
         {
+                       
         }
         
         protected override void Update(GameTime gameTime)
@@ -78,13 +79,37 @@ namespace WaveGame
                 principal.Move(Beater.Directions.Left, gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.D))
                 principal.Move(Beater.Directions.Right, gameTime);
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                principal.Hit();
+
+            if (principal.CheckLife() <= 0)
+            {
+                principal.Enabled = false;
+            }
 
             for (int i = 1; i != ndGraders.Count; i++)
             {
-                ndGraders[i].Move(principal.position.X, principal.position.Y, gameTime);
-            }          
+                if (ndGraders[i].CheckLife() > 0)
+                {
+                    ndGraders[i].Move(principal.position.X, principal.position.Y, gameTime);
+                }
+                if (ndGraders[i].Bounds.Intersects(principal.Bounds))
+                {
+                    ndGraders[i].takeDamage();
+                }
+                if (ndGraders[i].CheckLife() == 0)
+                {
+                    ndGraders.Remove(ndGraders[i]);
+                }
+            }
+
+            if (ndGraders.Count == 0)
+            {
+                waveCount.winPoint();
+            }
 
             waveCount.Update(gameTime);
+
 
             base.Update(gameTime);
         }
@@ -92,7 +117,7 @@ namespace WaveGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            
+            waveCount.life = principal.CheckLife();
             waveCount.Draw(gameTime);
             principal.Draw(gameTime);
 
@@ -100,7 +125,7 @@ namespace WaveGame
             {
                 ndGraders[i].Draw(gameTime);
             }
-
+            
             base.Draw(gameTime);
         }
     }

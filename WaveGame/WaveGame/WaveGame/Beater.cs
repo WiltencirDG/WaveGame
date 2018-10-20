@@ -16,15 +16,18 @@ namespace WaveGame
     public class Beater : Microsoft.Xna.Framework.DrawableGameComponent
     {
         public enum Directions { Up, Down, Left, Right }
+        public enum States { Idle, Walking }
         public Point position { get; set; }
         public int speed { get; set; }
+        public Rectangle Bounds { get; set; }
         Texture2D texture { get; set; }
         SpriteBatch spriteBatch;
+        States estados;
         int frames;
         int framesY;
         int qtdFrames;
         float elapsed;
-
+        int life;
 
         public Beater(Game game)
             : base(game)
@@ -33,6 +36,8 @@ namespace WaveGame
             speed = 5;
             frames = 0;
             qtdFrames = 4;
+            life = 15;
+            //Bounds = new Rectangle(position.X, position.Y, this.texture.Width, this.texture.Height);
         }
 
         public override void Initialize()
@@ -46,9 +51,10 @@ namespace WaveGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = game.Content.Load<Texture2D>("2ndGraders");
         }
-
+        
         public override void Update(GameTime gameTime)
         {
+            Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
             if (Keyboard.GetState().IsKeyDown(Keys.W))
@@ -98,6 +104,21 @@ namespace WaveGame
                 case Directions.Left: position = new Point(position.X - speed, position.Y); this.Update(gameTime); break;
                 case Directions.Right: position = new Point(position.X + speed, position.Y); this.Update(gameTime); break;
             }
+        }
+
+        public void Hit()
+        {
+
+        }
+
+        public void takeDamage()
+        {
+            this.life = this.life - 1;
+        }
+
+        public int CheckLife()
+        {
+            return this.life;
         }
 
     }
