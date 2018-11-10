@@ -138,12 +138,12 @@ namespace WaveGame
 
         protected  void startWave(Game1 game)
         {
-            for (int i = 0; i != 3; i++)
+            for (int i = 0; i != 10; i++)
             {
                 ndGraders.Add
-                    (
-                        new _2ndGrader(game, new Point(rand.Next(600), rand.Next(300)))
-                    );
+                (
+                    new _2ndGrader(game, new Point(rand.Next(600), rand.Next(300)))
+                );
             }
         }
     }

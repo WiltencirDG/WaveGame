@@ -75,8 +75,12 @@ namespace WaveGame
         public override void Update(GameTime gameTime)
         {
             Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames /2 , this.texture.Height / qtdFrames /2);
-            HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if (elapsed > 70)
+            {
+                HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
+            }
 
             if (Keyboard.GetState().IsKeyDown(Keys.W))
                 framesY = 3;
@@ -87,8 +91,6 @@ namespace WaveGame
             if (Keyboard.GetState().IsKeyDown(Keys.A))
                 framesY = 1;
             
-
-
             if (elapsed > 200)
             {
                 if (frames >= qtdFrames - 1)
@@ -131,7 +133,7 @@ namespace WaveGame
 
         public void Hit()
         {
-            this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames, this.texture.Height / qtdFrames / 2);
+            this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height / qtdFrames / 2);
         }
 
         public void takeDamage()
@@ -150,7 +152,7 @@ namespace WaveGame
         {
             if (toPower.State != SoundState.Playing)
                 toPower.Play();
-            HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames, this.texture.Height / qtdFrames);
+            HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
         }
 
     }
