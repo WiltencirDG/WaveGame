@@ -12,11 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace WaveGame
 {
-    /// <summary>
-    /// This is a game component that implements IUpdateable.
-    /// </summary>
     public class WaveCount : Microsoft.Xna.Framework.DrawableGameComponent
     {
+
         Point position { get; set; }
         int actual { get; set; }
         public int life { get; set; }
@@ -51,14 +49,15 @@ namespace WaveGame
 
         public override void Draw(GameTime gameTime)
         {
+            //Desenho para contador das ondas
             spriteBatch.Begin();
             spriteBatch.DrawString(waveFont, "Wave: " + actual, new Vector2(position.X, position.Y), Color.Black);
             spriteBatch.End();
-
+            //Desenho para contador da vida
             spriteBatch.Begin();
             spriteBatch.DrawString(waveFont, "Life: " + this.life, new Vector2(position.X, position.Y+15), Color.Black);
             spriteBatch.End();
-
+            //Desenho para contador do tempo restante do poder
             spriteBatch.Begin();
             spriteBatch.DrawString(waveFont, "Power: " + Math.Round(this.time/1000,2) + " s", new Vector2(position.X, position.Y + 30), Color.Black);
             spriteBatch.End();
@@ -68,6 +67,7 @@ namespace WaveGame
 
         public void winPoint()
         {
+            //Aumenta a onda atual
             this.actual++;
         }
 

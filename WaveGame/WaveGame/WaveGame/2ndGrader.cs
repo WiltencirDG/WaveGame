@@ -39,7 +39,6 @@ namespace WaveGame
             frames = 0;
             qtdFrames = 4;
             life = 3;
-            //Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
         }
 
         public _2ndGrader(Game game, Point pos)
@@ -50,7 +49,6 @@ namespace WaveGame
             frames = 0;
             qtdFrames = 4;
             life = 3;
-            //Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
         }
 
         public override void Initialize()
@@ -105,6 +103,7 @@ namespace WaveGame
 
         public void Move(float X, float Y, GameTime gameTime)
         {
+            //Movimentar e virar os inimigos
             if (position.X < X)
             {
                 position = new Point(position.X + speed, position.Y);
@@ -133,7 +132,7 @@ namespace WaveGame
 
         public void takeDamage()
         {
-
+            //Levar dano
             this.life -= 1;
             if (toTake.State != SoundState.Playing)
                 toTake.Play();
@@ -141,6 +140,7 @@ namespace WaveGame
 
         public int CheckLife()
         {
+            //Verificar a vida do inimigo
             return this.life;
         }
 
