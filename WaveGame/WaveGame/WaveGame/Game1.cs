@@ -30,7 +30,7 @@ namespace WaveGame
             waveCount = new WaveCount(this);
 
             //Inicia os inimigos
-            for (int i = 0; i != 10; i++)
+            for (int i = 0; i != 2; i++)
             {
                 ndGraders.Add
                 (
@@ -111,6 +111,13 @@ namespace WaveGame
                         {
                             //Se os inimigos encostarem no principal, principal leva dano
                             principal.takeDamage();
+
+                            //Se acabar a vida do principal, acaba o jogo
+                            if(principal.CheckLife() <= 0)
+                            {
+                                //"Game over"
+                                this.Exit();
+                            }
                         }
 
                         if (ndGraders[i].Bounds.Intersects(principal.HitBounds))
@@ -134,6 +141,17 @@ namespace WaveGame
             {
                 //Se acabaram os inimigos, muda de onda
                 waveCount.winPoint();
+
+                ndGraders.Clear();
+
+                if (elapsed > 300)
+                {
+                    ndGraders.Add
+                    (
+                        new _2ndGrader(this, new Point(rand.Next(600), rand.Next(300)))
+                    );
+                }
+
             }
 
             waveCount.Update(gameTime);

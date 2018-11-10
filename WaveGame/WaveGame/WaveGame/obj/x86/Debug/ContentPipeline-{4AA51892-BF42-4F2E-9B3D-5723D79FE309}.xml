@@ -46,6 +46,15 @@
       <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\power.xnb</Output>
       <Time>2018-11-10T14:55:20-02:00</Time>
     </Item>
+    <Item>
+      <Source>roth.png</Source>
+      <Name>roth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\roth.xnb</Output>
+      <Time>2018-11-10T04:07:28-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{4AA51892-BF42-4F2E-9B3D-5723D79FE309}</ContentProjectGUID>
