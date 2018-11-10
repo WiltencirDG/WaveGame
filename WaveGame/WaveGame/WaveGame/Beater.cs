@@ -20,6 +20,7 @@ namespace WaveGame
         public Point position { get; set; }
         public int speed { get; set; }
         public Rectangle Bounds { get; set; }
+        public Rectangle HitBounds { get; set; }
         Texture2D texture { get; set; }
         SpriteBatch spriteBatch;
         States estados;
@@ -33,6 +34,8 @@ namespace WaveGame
         SoundEffectInstance toHit;
         SoundEffect take;
         SoundEffectInstance toTake;
+        SoundEffect power;
+        SoundEffectInstance toPower;
 
         public Beater(Game game)
             : base(game)
@@ -63,11 +66,16 @@ namespace WaveGame
             //Levar Dano
             take = game.Content.Load<SoundEffect>("beater_take");
             toTake = take.CreateInstance();
+
+            //Power
+            power = game.Content.Load<SoundEffect>("power");
+            toPower = power.CreateInstance();
         }
         
         public override void Update(GameTime gameTime)
         {
             Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames /2 , this.texture.Height / qtdFrames /2);
+            HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
             if (Keyboard.GetState().IsKeyDown(Keys.W))
@@ -78,6 +86,8 @@ namespace WaveGame
                 framesY = 2;
             if (Keyboard.GetState().IsKeyDown(Keys.A))
                 framesY = 1;
+            
+
 
             if (elapsed > 200)
             {
@@ -121,7 +131,7 @@ namespace WaveGame
 
         public void Hit()
         {
-
+            this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames, this.texture.Height / qtdFrames / 2);
         }
 
         public void takeDamage()
@@ -134,6 +144,13 @@ namespace WaveGame
         public int CheckLife()
         {
             return this.life;
+        }
+
+        public void shout()
+        {
+            if (toPower.State != SoundState.Playing)
+                toPower.Play();
+            HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames, this.texture.Height / qtdFrames);
         }
 
     }

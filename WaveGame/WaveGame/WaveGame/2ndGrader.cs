@@ -26,9 +26,7 @@ namespace WaveGame
         int qtdFrames;
         float elapsed;
         int life;
-
-        SoundEffect hit;
-        SoundEffectInstance toHit;
+        
         SoundEffect take;
         SoundEffectInstance toTake;
 
@@ -65,6 +63,10 @@ namespace WaveGame
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = game.Content.Load<Texture2D>("2ndGraders");
+
+            //Levar Dano
+            take = game.Content.Load<SoundEffect>("beater_hit");
+            toTake = take.CreateInstance();
         }
 
         public override void Update(GameTime gameTime)
@@ -129,15 +131,12 @@ namespace WaveGame
             }            
         }
 
-        public void Hit()
-        {
-
-        }
-
         public void takeDamage()
         {
 
             this.life -= 1;
+            if (toTake.State != SoundState.Playing)
+                toTake.Play();
         }
 
         public int CheckLife()

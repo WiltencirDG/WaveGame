@@ -75,7 +75,10 @@ namespace WaveGame
                 principal.Move(Beater.Directions.Left, gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.D))
                 principal.Move(Beater.Directions.Right, gameTime);
-
+            if (Keyboard.GetState().IsKeyDown(Keys.Q))
+                principal.shout();
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                principal.Hit();
 
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
@@ -91,6 +94,12 @@ namespace WaveGame
                         {
                             principal.takeDamage();
                         }
+
+                        if (ndGraders[i].Bounds.Intersects(principal.HitBounds))
+                        {
+                            ndGraders[i].takeDamage();
+                        }
+
                         elapsed = 0;
                     }
                 }
