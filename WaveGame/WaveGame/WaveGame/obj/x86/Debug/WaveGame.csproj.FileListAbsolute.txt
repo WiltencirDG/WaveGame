@@ -24,3 +24,6 @@ Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\Wave
 Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.exe
 Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\WaveGame.pdb
+D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_hit.xnb
+D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_take.xnb
+D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\power.xnb

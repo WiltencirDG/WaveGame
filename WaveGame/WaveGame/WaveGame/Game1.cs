@@ -19,6 +19,7 @@ namespace WaveGame
         List<_2ndGrader> ndGraders = new List<_2ndGrader>();
         WaveCount waveCount;
         Random rand = new Random();
+        float elapsed;
 
         public Game1()
         {
@@ -28,13 +29,8 @@ namespace WaveGame
             principal = new Beater(this);
             waveCount = new WaveCount(this);
 
-            for(int i = 0; i != 10; i++)
-            {
-                ndGraders.Add
-                    (
-                        new _2ndGrader(this, new Point(rand.Next(600),rand.Next(300)))
-                    );
-            }
+            startWave(this);
+
         }
         
         protected override void Initialize()
@@ -79,16 +75,23 @@ namespace WaveGame
                 principal.Move(Beater.Directions.Left, gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.D))
                 principal.Move(Beater.Directions.Right, gameTime);
-            
+
+
+            elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
             for (int i = 0; i < ndGraders.Count; i++)
             {
 
                 if (ndGraders[i].CheckLife() > 0)
                 {
                     ndGraders[i].Move(principal.position.X, principal.position.Y, gameTime);
-                    if (ndGraders[i].Bounds.Intersects(principal.Bounds))
+                    if (elapsed > 100)
                     {
-                        ndGraders[i].takeDamage();
+                        if (ndGraders[i].Bounds.Intersects(principal.Bounds))
+                        {
+                            principal.takeDamage();
+                        }
+                        elapsed = 0;
                     }
                 }
                 else
@@ -122,6 +125,17 @@ namespace WaveGame
             }
             
             base.Draw(gameTime);
+        }
+
+        protected  void startWave(Game1 game)
+        {
+            for (int i = 0; i != 3; i++)
+            {
+                ndGraders.Add
+                    (
+                        new _2ndGrader(game, new Point(rand.Next(600), rand.Next(300)))
+                    );
+            }
         }
     }
 }

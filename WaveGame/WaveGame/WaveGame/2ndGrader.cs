@@ -27,6 +27,11 @@ namespace WaveGame
         float elapsed;
         int life;
 
+        SoundEffect hit;
+        SoundEffectInstance toHit;
+        SoundEffect take;
+        SoundEffectInstance toTake;
+
 
         public _2ndGrader(Game game)
             : base(game)
@@ -131,6 +136,7 @@ namespace WaveGame
 
         public void takeDamage()
         {
+
             this.life -= 1;
         }
 

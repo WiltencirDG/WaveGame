@@ -19,6 +19,33 @@
       <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb</Output>
       <Time>2018-09-20T19:44:32-03:00</Time>
     </Item>
+    <Item>
+      <Source>beater_hit.wav</Source>
+      <Name>beater_hit</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_hit.xnb</Output>
+      <Time>2018-11-10T14:55:20-02:00</Time>
+    </Item>
+    <Item>
+      <Source>beater_take.wav</Source>
+      <Name>beater_take</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_take.xnb</Output>
+      <Time>2018-11-10T14:55:20-02:00</Time>
+    </Item>
+    <Item>
+      <Source>power.wav</Source>
+      <Name>power</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\power.xnb</Output>
+      <Time>2018-11-10T14:55:20-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{4AA51892-BF42-4F2E-9B3D-5723D79FE309}</ContentProjectGUID>
