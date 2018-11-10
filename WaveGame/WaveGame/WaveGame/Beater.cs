@@ -29,6 +29,7 @@ namespace WaveGame
         int qtdFrames;
         float elapsed;
         int life;
+        public float recoveryPower { get; set; }
 
         SoundEffect hit;
         SoundEffectInstance toHit;
@@ -45,6 +46,7 @@ namespace WaveGame
             frames = 0;
             qtdFrames = 4;
             life = 15;
+            recoveryPower = 1000;
             //Bounds = new Rectangle(position.X, position.Y, this.texture.Width, this.texture.Height);
         }
 
@@ -76,10 +78,10 @@ namespace WaveGame
         {
             Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames /2 , this.texture.Height / qtdFrames /2);
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
+            
             if (elapsed > 70)
             {
-                HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
+                HitBounds = Bounds;
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.W))
@@ -133,7 +135,7 @@ namespace WaveGame
 
         public void Hit()
         {
-            this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height / qtdFrames / 2);
+            this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width*2, this.texture.Height / qtdFrames / 2);
         }
 
         public void takeDamage()
@@ -148,11 +150,28 @@ namespace WaveGame
             return this.life;
         }
 
+        public float CheckPower()
+        {
+            if (this.recoveryPower > 0)
+            {
+                return this.recoveryPower;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
         public void shout()
         {
-            if (toPower.State != SoundState.Playing)
-                toPower.Play();
-            HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
+            if (recoveryPower <= 0)
+            {
+                if (toPower.State != SoundState.Playing)
+                    toPower.Play();
+                recoveryPower = 25000;
+                this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width * 2, this.texture.Height * 4);
+            }
         }
 
     }

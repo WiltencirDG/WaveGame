@@ -20,6 +20,7 @@ namespace WaveGame
         Point position { get; set; }
         int actual { get; set; }
         public int life { get; set; }
+        public float time { get; set; }
         SpriteBatch spriteBatch;
         SpriteFont waveFont;
 
@@ -56,6 +57,10 @@ namespace WaveGame
 
             spriteBatch.Begin();
             spriteBatch.DrawString(waveFont, "Life: " + this.life, new Vector2(position.X, position.Y+15), Color.Black);
+            spriteBatch.End();
+
+            spriteBatch.Begin();
+            spriteBatch.DrawString(waveFont, "Power: " + Math.Round(this.time/1000,2) + " s", new Vector2(position.X, position.Y + 30), Color.Black);
             spriteBatch.End();
 
             base.Draw(gameTime);
