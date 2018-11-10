@@ -142,9 +142,8 @@ namespace WaveGame
                 //Se acabaram os inimigos, muda de onda
                 waveCount.winPoint();
 
-                ndGraders.Clear();
-
-                if (elapsed > 300)
+                //Reinicia os inimigos
+                for (int i = 0; i != 2; i++)
                 {
                     ndGraders.Add
                     (
@@ -152,6 +151,7 @@ namespace WaveGame
                     );
                 }
 
+                ndGraders.Clear();
             }
 
             waveCount.Update(gameTime);
@@ -168,9 +168,12 @@ namespace WaveGame
             waveCount.Draw(gameTime);
             principal.Draw(gameTime);
 
-            for (int i = 0; i != ndGraders.Count; i++)
+            if (ndGraders.Count > 0)
             {
-                ndGraders[i].Draw(gameTime);
+                for (int i = 0; i != ndGraders.Count; i++)
+                {
+                    ndGraders[i].Draw(gameTime);
+                }
             }
             
             base.Draw(gameTime);
