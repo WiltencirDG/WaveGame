@@ -64,7 +64,7 @@ namespace WaveGame
 
         public override void Update(GameTime gameTime)
         {
-            Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height);
+            Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                         
             if (elapsed > 200)

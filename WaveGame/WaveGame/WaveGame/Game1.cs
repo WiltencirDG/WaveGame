@@ -28,7 +28,7 @@ namespace WaveGame
             principal = new Beater(this);
             waveCount = new WaveCount(this);
 
-            for(int i = 1; i != 10; i++)
+            for(int i = 0; i != 10; i++)
             {
                 ndGraders.Add
                     (
@@ -42,7 +42,7 @@ namespace WaveGame
             principal.Initialize();
             waveCount.Initialize();
 
-            for (int i = 1; i != ndGraders.Count; i++)
+            for (int i = 0; i != ndGraders.Count; i++)
             {
                 ndGraders[i].Initialize();
             }
@@ -53,7 +53,7 @@ namespace WaveGame
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            for (int i = 1; i != ndGraders.Count; i++)
+            for (int i = 0; i != ndGraders.Count; i++)
             {
                 ndGraders[i].LoadContent(this);
             }
@@ -79,28 +79,23 @@ namespace WaveGame
                 principal.Move(Beater.Directions.Left, gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.D))
                 principal.Move(Beater.Directions.Right, gameTime);
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                principal.Hit();
-
-            if (principal.CheckLife() <= 0)
+            
+            for (int i = 0; i < ndGraders.Count; i++)
             {
-                principal.Enabled = false;
-            }
 
-            for (int i = 1; i != ndGraders.Count; i++)
-            {
                 if (ndGraders[i].CheckLife() > 0)
                 {
                     ndGraders[i].Move(principal.position.X, principal.position.Y, gameTime);
+                    if (ndGraders[i].Bounds.Intersects(principal.Bounds))
+                    {
+                        ndGraders[i].takeDamage();
+                    }
                 }
-                if (ndGraders[i].Bounds.Intersects(principal.Bounds))
-                {
-                    ndGraders[i].takeDamage();
-                }
-                if (ndGraders[i].CheckLife() == 0)
+                else
                 {
                     ndGraders.Remove(ndGraders[i]);
                 }
+                
             }
 
             if (ndGraders.Count == 0)
@@ -121,7 +116,7 @@ namespace WaveGame
             waveCount.Draw(gameTime);
             principal.Draw(gameTime);
 
-            for (int i = 1; i != ndGraders.Count; i++)
+            for (int i = 0; i != ndGraders.Count; i++)
             {
                 ndGraders[i].Draw(gameTime);
             }
