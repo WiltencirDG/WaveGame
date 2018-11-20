@@ -93,7 +93,7 @@ namespace WaveGame
             
             if (elapsed > 100)
             {
-                HitBounds = Bounds;
+                HitBounds = new Rectangle(this.position.X, this.position.Y,0,0); ;
             }
 
             //Virar o personagem
