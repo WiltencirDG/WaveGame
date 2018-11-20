@@ -55,6 +55,15 @@
       <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\roth.xnb</Output>
       <Time>2018-11-10T04:07:28-02:00</Time>
     </Item>
+    <Item>
+      <Source>mapa.png</Source>
+      <Name>mapa</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\mapa.xnb</Output>
+      <Time>2018-11-20T13:12:36.1864519-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{4AA51892-BF42-4F2E-9B3D-5723D79FE309}</ContentProjectGUID>

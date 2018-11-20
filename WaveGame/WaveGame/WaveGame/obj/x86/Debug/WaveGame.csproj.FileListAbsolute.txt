@@ -28,3 +28,4 @@ D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_hit.xnb
 D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_take.xnb
 D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\power.xnb
 D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\roth.xnb
+D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\mapa.xnb

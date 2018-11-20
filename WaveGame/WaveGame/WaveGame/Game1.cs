@@ -14,6 +14,7 @@ namespace WaveGame
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
+        Texture2D texture { get; set; }
         SpriteBatch spriteBatch;
         Beater principal;
         List<_2ndGrader> ndGraders = new List<_2ndGrader>();
@@ -56,6 +57,7 @@ namespace WaveGame
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            texture = this.Content.Load<Texture2D>("mapa");
             for (int i = 0; i != ndGraders.Count; i++)
             {
                 ndGraders[i].LoadContent(this);
@@ -163,6 +165,16 @@ namespace WaveGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(
+                texture,
+                new Rectangle(0, 0, Window.ClientBounds.Width, Window.ClientBounds.Height),
+                Color.White
+                );
+            spriteBatch.End();
+            
+
             waveCount.life = principal.CheckLife();
             waveCount.time = principal.CheckPower();
             waveCount.Draw(gameTime);
