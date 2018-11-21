@@ -21,7 +21,7 @@ namespace WaveGame
         WaveCount waveCount;
         Random rand = new Random();
         float elapsed;
-
+        int qtdInimigos = 5;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -29,9 +29,9 @@ namespace WaveGame
 
             principal = new Beater(this);
             waveCount = new WaveCount(this);
-
+            
             //Inicia os inimigos
-            for (int i = 0; i != 2; i++)
+            for (int i = 0; i != qtdInimigos; i++)
             {
                 ndGraders.Add
                 (
@@ -94,7 +94,21 @@ namespace WaveGame
             if (Keyboard.GetState().IsKeyDown(Keys.Q))
                 principal.shout();
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                principal.Hit();
+            {
+                int direct = 3;
+
+                if (Keyboard.GetState().IsKeyDown(Keys.W))
+                    direct = 0;
+                if (Keyboard.GetState().IsKeyDown(Keys.S))
+                    direct = 1;
+                if (Keyboard.GetState().IsKeyDown(Keys.A))
+                    direct = 2;
+                if (Keyboard.GetState().IsKeyDown(Keys.D))
+                    direct = 3;
+
+                principal.Hit(direct);
+            }
+                
             //Tempo de Recuperação do Especial
             principal.recoveryPower -= elapsed;
 
@@ -143,17 +157,36 @@ namespace WaveGame
             {
                 //Se acabaram os inimigos, muda de onda
                 waveCount.winPoint();
-
+                ndGraders = new List<_2ndGrader>();
                 //Reinicia os inimigos
-                for (int i = 0; i != 2; i++)
+                int vida = 5;
+                if(waveCount.checkWave()%5 == 0)
+                {
+                    qtdInimigos = 1;
+                    vida = 50;
+                }else
+                {
+                    qtdInimigos = 5;
+                    vida = 5;
+                }
+                for (int i = 0; i != qtdInimigos; i++)
                 {
                     ndGraders.Add
                     (
-                        new _2ndGrader(this, new Point(rand.Next(600), rand.Next(300)))
+                        new _2ndGrader(this, new Point(rand.Next(600), rand.Next(300)),vida)
                     );
                 }
 
-                ndGraders.Clear();
+                for (int i = 0; i != ndGraders.Count; i++)
+                {
+                    ndGraders[i].Initialize();
+                }
+
+                for (int i = 0; i != ndGraders.Count; i++)
+                {
+                    ndGraders[i].LoadContent(this);
+                }
+
             }
 
             waveCount.Update(gameTime);

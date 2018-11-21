@@ -91,7 +91,7 @@ namespace WaveGame
             //Tempo decorrido
             elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             
-            if (elapsed > 100)
+            if (elapsed > 50)
             {
                 HitBounds = new Rectangle(this.position.X, this.position.Y,0,0); ;
             }
@@ -148,10 +148,17 @@ namespace WaveGame
             }
         }
 
-        public void Hit()
+        public void Hit(int direct)
         {
             //Aumentar o Limite do Hit
-            this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width*2, this.texture.Height / qtdFrames / 2);
+
+            switch (direct)
+            {
+                case 0: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, -this.texture.Height); break;
+                case 1: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height); break;
+                case 2: this.HitBounds = new Rectangle(this.position.X, this.position.Y, -this.texture.Width, this.texture.Height / qtdFrames / 2); break;
+                case 3: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height / qtdFrames / 2); break;
+            }
         }
 
         public void takeDamage()

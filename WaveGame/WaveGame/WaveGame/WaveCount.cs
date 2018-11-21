@@ -71,5 +71,11 @@ namespace WaveGame
             this.actual++;
         }
 
+        public int checkWave()
+        {
+            //Checa qual é a onda atual
+            return this.actual;
+        }
+
     }
 }

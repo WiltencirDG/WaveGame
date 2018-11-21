@@ -38,7 +38,7 @@ namespace WaveGame
             speed = 1;
             frames = 0;
             qtdFrames = 4;
-            life = 3;
+            life = 5;
         }
 
         public _2ndGrader(Game game, Point pos)
@@ -48,7 +48,17 @@ namespace WaveGame
             speed = 1;
             frames = 0;
             qtdFrames = 4;
-            life = 3;
+            life = 5;
+        }
+
+        public _2ndGrader(Game game, Point pos, int lf)
+            : base(game)
+        {
+            position = pos;
+            speed = 1;
+            frames = 0;
+            qtdFrames = 4;
+            life = lf;
         }
 
         public override void Initialize()
@@ -69,36 +79,49 @@ namespace WaveGame
 
         public override void Update(GameTime gameTime)
         {
-            Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
-            elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-                        
-            if (elapsed > 200)
+            try
             {
-                if (frames >= qtdFrames-1)
-                {
-                    frames = 0;
-                }
-                else
-                {
-                    frames++;
-                }
-                elapsed = 0;
-            }
+                Bounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height / qtdFrames / 2);
+                elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            base.Update(gameTime);
+                if (elapsed > 200)
+                {
+                    if (frames >= qtdFrames - 1)
+                    {
+                        frames = 0;
+                    }
+                    else
+                    {
+                        frames++;
+                    }
+                    elapsed = 0;
+                }
+
+                base.Update(gameTime);
+            }catch
+            {
+
+            }
         }
 
         public override void Draw(GameTime gameTime)
         {
-            spriteBatch.Begin();
-            spriteBatch.Draw(
-                texture,
-                new Rectangle(position.X, position.Y, texture.Width/ qtdFrames, texture.Height/ qtdFrames),new Rectangle((texture.Width / qtdFrames) *frames,(texture.Height / qtdFrames) *framesY, texture.Width / qtdFrames, texture.Height /qtdFrames),
-                Color.White
-                );
-            spriteBatch.End();
+            try
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(
+                    texture,
+                    new Rectangle(position.X, position.Y, texture.Width / qtdFrames, texture.Height / qtdFrames), new Rectangle((texture.Width / qtdFrames) * frames, (texture.Height / qtdFrames) * framesY, texture.Width / qtdFrames, texture.Height / qtdFrames),
+                    Color.Yellowaaas
+                    );
+                spriteBatch.End();
 
-            base.Draw(gameTime);
+                base.Draw(gameTime);
+            }
+            catch
+            {
+
+            }
         }
 
         public void Move(float X, float Y, GameTime gameTime)
