@@ -37,7 +37,7 @@ namespace WaveGame
         float elapsed;
         int life;
         public float recoveryPower { get; set; }
-
+        int dano = 1;
         //Sons
         SoundEffect hit;
         SoundEffectInstance toHit;
@@ -93,7 +93,8 @@ namespace WaveGame
             
             if (elapsed > 50)
             {
-                HitBounds = new Rectangle(this.position.X, this.position.Y,0,0); ;
+                HitBounds = new Rectangle(this.position.X, this.position.Y,0,0);
+                this.dano = 1;
             }
 
             //Virar o personagem
@@ -151,13 +152,35 @@ namespace WaveGame
         public void Hit(int direct)
         {
             //Aumentar o Limite do Hit
+            // Y --- UP
+            /*switch (direct)
+            { 
+                case 0: this.HitBounds = new Rectangle(this.position.X, this.position.Y+this.texture.Height, this.texture.Width / qtdFrames , this.texture.Height); break; //W
+                
+                case 2: this.HitBounds = new Rectangle(this.position.X-this.texture.Width, this.position.Y, this.texture.Width, this.texture.Height / qtdFrames); break; //A
+                
+                    //-- 
 
-            switch (direct)
+                case 1: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames , this.texture.Height*2); break;  //S
+                
+                case 3: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width * 2, this.texture.Height / qtdFrames ); break;//D
+            }*/
+
+            if(direct == 0)
             {
-                case 0: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, -this.texture.Height); break;
-                case 1: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames / 2, this.texture.Height); break;
-                case 2: this.HitBounds = new Rectangle(this.position.X, this.position.Y, -this.texture.Width, this.texture.Height / qtdFrames / 2); break;
-                case 3: this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width, this.texture.Height / qtdFrames / 2); break;
+                this.HitBounds = new Rectangle(this.position.X, this.position.Y-300, this.texture.Width / qtdFrames, this.texture.Height);
+            }
+            if (direct == 2)
+            {
+                this.HitBounds = new Rectangle(this.position.X-300, this.position.Y, this.texture.Width * 2, this.texture.Height / qtdFrames);
+            }
+            if (direct == 1)
+            {
+                this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width / qtdFrames, this.texture.Height); 
+            }
+            if (direct == 3)
+            {
+                this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width * 2, this.texture.Height / qtdFrames); 
             }
         }
 
@@ -198,7 +221,8 @@ namespace WaveGame
                 if (toPower.State != SoundState.Playing)
                     toPower.Play();
                 recoveryPower = 25000;
-                this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width * 2, this.texture.Height * 4);
+                this.dano = 8;
+                this.HitBounds = new Rectangle(this.position.X, this.position.Y, this.texture.Width * 8, this.texture.Height * 8);
             }
         }
 

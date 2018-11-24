@@ -22,6 +22,8 @@ namespace WaveGame
         Random rand = new Random();
         float elapsed;
         int qtdInimigos = 5;
+        int direct = 0;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -93,10 +95,10 @@ namespace WaveGame
             //Especial e Ação
             if (Keyboard.GetState().IsKeyDown(Keys.Q))
                 principal.shout();
+            
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
-                int direct = 3;
-
+                
                 if (Keyboard.GetState().IsKeyDown(Keys.W))
                     direct = 0;
                 if (Keyboard.GetState().IsKeyDown(Keys.S))
@@ -106,6 +108,7 @@ namespace WaveGame
                 if (Keyboard.GetState().IsKeyDown(Keys.D))
                     direct = 3;
 
+                
                 principal.Hit(direct);
             }
                 

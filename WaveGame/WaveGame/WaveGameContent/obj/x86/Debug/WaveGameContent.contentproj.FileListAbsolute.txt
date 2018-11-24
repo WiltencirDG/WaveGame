@@ -1,2 +1,3 @@
 D:\WaveGame\WaveGame\WaveGame\WaveGameContent\obj\x86\Debug\WaveGameContent.contentprojResolveAssemblyReference.cache
 Z:\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGameContent\obj\x86\Debug\WaveGameContent.contentprojResolveAssemblyReference.cache
+C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGameContent\obj\x86\Debug\WaveGameContent.contentprojResolveAssemblyReference.cache

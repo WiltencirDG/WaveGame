@@ -7,44 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\2ndGraders.xnb</Output>
-      <Time>2018-09-20T19:44:32-03:00</Time>
-    </Item>
-    <Item>
-      <Source>waveFont.spritefont</Source>
-      <Name>waveFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb</Output>
-      <Time>2018-09-20T19:44:32-03:00</Time>
-    </Item>
-    <Item>
-      <Source>beater_hit.wav</Source>
-      <Name>beater_hit</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_hit.xnb</Output>
-      <Time>2018-11-10T14:55:20-02:00</Time>
-    </Item>
-    <Item>
-      <Source>beater_take.wav</Source>
-      <Name>beater_take</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_take.xnb</Output>
-      <Time>2018-11-10T14:55:20-02:00</Time>
-    </Item>
-    <Item>
-      <Source>power.wav</Source>
-      <Name>power</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\power.xnb</Output>
-      <Time>2018-11-10T14:55:20-02:00</Time>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\2ndGraders.xnb</Output>
+      <Time>2018-11-21T20:04:17.6155546-02:00</Time>
     </Item>
     <Item>
       <Source>roth.png</Source>
@@ -52,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\roth.xnb</Output>
-      <Time>2018-11-10T04:07:28-02:00</Time>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\roth.xnb</Output>
+      <Time>2018-11-21T20:04:17.8186006-02:00</Time>
     </Item>
     <Item>
       <Source>mapa.png</Source>
@@ -61,8 +25,44 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\mapa.xnb</Output>
-      <Time>2018-11-20T13:12:36.1864519-02:00</Time>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\mapa.xnb</Output>
+      <Time>2018-11-21T20:04:17.7717347-02:00</Time>
+    </Item>
+    <Item>
+      <Source>waveFont.spritefont</Source>
+      <Name>waveFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\waveFont.xnb</Output>
+      <Time>2018-11-21T20:04:17.8342526-02:00</Time>
+    </Item>
+    <Item>
+      <Source>beater_hit.wav</Source>
+      <Name>beater_hit</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_hit.xnb</Output>
+      <Time>2018-11-21T20:04:17.6780608-02:00</Time>
+    </Item>
+    <Item>
+      <Source>beater_take.wav</Source>
+      <Name>beater_take</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\beater_take.xnb</Output>
+      <Time>2018-11-21T20:04:17.7404939-02:00</Time>
+    </Item>
+    <Item>
+      <Source>power.wav</Source>
+      <Name>power</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\power.xnb</Output>
+      <Time>2018-11-21T20:04:17.8030129-02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -71,39 +71,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGameContent\</RootDirectory>
-      <LoggerRootDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGame\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGame\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\WaveGame\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\andri\Downloads\WaveGame-master\WaveGame-master\WaveGame\WaveGame\WaveGame\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-03:00</Value>
+        <Value>2011-09-01T15:22:30-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T16:22:30-03:00</Value>
+        <Value>2011-09-01T15:22:30-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-03:00</Value>
+        <Value>2011-09-01T15:22:30-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-03:00</Value>
+        <Value>2011-09-01T15:22:30-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T16:22:30-03:00</Value>
+        <Value>2011-09-01T15:22:30-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T16:22:30-03:00</Value>
+        <Value>2011-09-01T15:22:30-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2018-09-01T05:47:50.7181951-03:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2018-11-23T13:03:57.8605777-02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

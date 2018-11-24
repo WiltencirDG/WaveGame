@@ -112,7 +112,7 @@ namespace WaveGame
                 spriteBatch.Draw(
                     texture,
                     new Rectangle(position.X, position.Y, texture.Width / qtdFrames, texture.Height / qtdFrames), new Rectangle((texture.Width / qtdFrames) * frames, (texture.Height / qtdFrames) * framesY, texture.Width / qtdFrames, texture.Height / qtdFrames),
-                    Color.Yellowaaas
+                    Color.Yellow
                     );
                 spriteBatch.End();
 
